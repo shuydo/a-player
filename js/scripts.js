@@ -102,27 +102,13 @@ const AudioController = {
     if (!itemId) return; //case if along track in list
 
     this.setCurrentItem(itemId);
-
-    // --------------jan
-    // const { current } = this.state;
-
-    // const currentItem = document.querySelector(`[data-id="${current.id}"]`);
-    // const next = currentItem.nextSibling?.dataset;
-    // const first = this.audioList.firstChild?.dataset;
-
-    // const itemId = next?.id || first?.id;
-
-    // if (!itemId) return;
-
-    // this.setCurrentItem(itemId);
   },
 
   //handler 4 buttons manage playing
   handlePlayer() {
     const play = document.querySelector(".controls-play");
     const prev = document.querySelector(".controls-prev");
-    const next = document.querySelector(".controls-next");
-    // console.log(play);
+    const next = document.querySelector(".controls-next"); // console.log(play);
 
     this.playButton = play; // before 1st click this btn is "play" (no "pause")
 
@@ -136,8 +122,7 @@ const AudioController = {
     const timeline = document.querySelector(".timeline-start"); //? id    // audio.play();
 
     audio.addEventListener("timeupdate", ({ target }) => {
-      // console.log(target.currentTime);//current time during play audio
-      const { currentTime } = target;
+      const { currentTime } = target; // console.log(target.currentTime);//current time during play audio
       const width = (currentTime * 100) / duration;
 
       timeline.innerHTML = toMinAndSec(currentTime); //render change currentTime
@@ -157,7 +142,7 @@ const AudioController = {
     const [img] = link.split("."); //why, maybe to ones
     return `<div
               class="current-image"
-              style="background-image: url(./img/${img}.jpg)"
+              style="background-image: url(../img/${img}.jpg)"
             ></div>
 
             <div class="current-info">
