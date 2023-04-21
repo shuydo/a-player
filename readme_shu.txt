@@ -8,3 +8,5 @@ console.log(obj.playbackRate); // Expected Output: 1)
 idea 4 prictice:
 
 combine prev 7 next fns in one fn
+
+! mixins ???
