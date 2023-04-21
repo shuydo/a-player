@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Player</title>
+
+    <script src="js/scripts.js" type="module"></script>
+  </head>
+
+  <body>
+    <div class="root">
+      <!-- <h1>Player</h1> -->
+
+      <main class="app">
+        <div class="content">
+          <!-- block with action for manage volume,shuffle,continue -->
+          <div class="handling">
+            <!-- volume -->
+            <div class="handling-sound" title="Volume">
+              <svg class="icon-sound">
+                <use xlink:href="img/sprite.svg#sound"></use>
+              </svg>
+
+              <div class="volume">
+                <input
+                  class="controls-volume"
+                  min="0"
+                  max="1"
+                  step=".05"
+                  value=".5"
+                  type="range"
+                  name="volume"
+                />
+              </div>
+            </div>
+            <!-- continue -->
+            <div class="handling-repeat" title="Repeat">
+              <svg class="icon-repeat">
+                <use xlink:href="img/sprite.svg#repeat"></use>
+              </svg>
+            </div>
+            <!-- shuffle -->
+            <div class="handling-shuffle" title="Shuffle">
+              <svg class="icon-shuffle">
+                <use xlink:href="img/sprite.svg#shuffle"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="current"></div>
+
+          <div class="list">
+            <p class="list-title">All tracks</p>
+            <!-- why not ul? -->
+            <div class="items"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
