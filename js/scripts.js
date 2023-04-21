@@ -142,7 +142,7 @@ const AudioController = {
     const [img] = link.split("."); //why, maybe to ones
     return `<div
               class="current-image"
-              style="background-image: url(../img/${img}.jpg)"
+              style="background-image: url(img/${img}.jpg)"
             ></div>
 
             <div class="current-info">
@@ -246,17 +246,11 @@ const AudioController = {
 
   //render 1 item of AudoList
   renderItem({ id, link, track, group, genre, duration }) {
-    // const { id, link, track, group, genre, duration } = audio;
-    // console.log(img);
-    // console.log(duration);
-    // console.log(toMinAndSec(duration));
-
-    // const item =
     const img = link.split(".")[0]; // const [img] = link.split(".")
     return `<div class="item" data-id="${id}">
               <div
                 class="item-image"
-                style="background-image: url(./img/${img}.jpg)"
+                style="background-image: url(img/${img}.jpg)"
               ></div>
 
               <div class="item-titles">
@@ -299,8 +293,3 @@ const AudioController = {
 };
 // ----------------------------------------------------------------------------------------------------------
 AudioController.init();
-
-// const chili = new Audio("./tracks/chili.mp3");
-// console.log(chili);
-// setTimeout(() => console.log(chili.duration), .4);
-// console.log(chili.duration);
