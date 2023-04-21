@@ -10,3 +10,4 @@ idea 4 prictice:
 combine prev 7 next fns in one fn
 
 ! mixins ???
+----- change register extentions 4 images
